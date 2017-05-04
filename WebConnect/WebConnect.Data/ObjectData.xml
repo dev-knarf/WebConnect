@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+  
+  <object name="MyPropertyPlaceholderConfigurer" type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="appSettings"/>
+  </object>
+
+  <db:provider id="MyDbProvider"
+               provider="Oracle.ManagedDataAccess.Client"
+               connectionString="Database = ${DataBase.Service}; Data Source = ${DataBase.Host}; User Id = ${DataBase.Username}; Password = ${DataBase.Password}; Port = ${DataBase.Port};" />
+  
+  <object id="MySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate4">
+    <property name="DbProvider" ref="MyDbProvider" />
+    <property name="ExposeTransactionAwareSessionFactory" value="true" />
+    <property name="MappingAssemblies">
+      <list>
+        <value>WebConnect.Data.Model</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="connection.provider" 
+               value="NHibernate.Connection.DriverConnectionProvider" />
+        <entry key="dialect" 
+               value="NHibernate.Dialect.Oracle12cDialect" />
+        <entry key="connection.driver_class" 
+               value="NHibernate.Driver.OracleClientDriver" />
+        <entry key="hbm2ddl.auto" 
+               value="none" />
+        <entry key="hbm2ddl.keywords" 
+               value="none" />
+        <entry key="order_inserts" 
+               value="true" />
+        <entry key="show_sql" 
+               value="true" />
+        <entry key="cache.use_query_cache" 
+               value="true" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="MyTemplate" type="Spring.Data.NHibernate.HibernateTemplate, Spring.Data.NHibernate4" >
+    <property name="SessionFactory" ref="MySessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+</objects>

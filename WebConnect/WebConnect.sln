@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Core", "WebConnect.Core\WebConnect.Core.csproj", "{85221244-0C5C-4487-9F71-649206028334}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Data", "WebConnect.Data\WebConnect.Data.csproj", "{E7FA7063-CE74-4D7A-8307-62BC43943EF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Data.Model", "WebConnect.Data.Model\WebConnect.Data.Model.csproj", "{10DB8D21-1077-4405-82CC-4DF870128F7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{85221244-0C5C-4487-9F71-649206028334}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85221244-0C5C-4487-9F71-649206028334}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85221244-0C5C-4487-9F71-649206028334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E7FA7063-CE74-4D7A-8307-62BC43943EF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7FA7063-CE74-4D7A-8307-62BC43943EF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7FA7063-CE74-4D7A-8307-62BC43943EF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7FA7063-CE74-4D7A-8307-62BC43943EF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
