@@ -36,11 +36,11 @@
     <AssemblyOriginatorKeyFile>WebConnect.Sign.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Logging.3.0.0\lib\net40\Common.Logging.dll</HintPath>
+    <Reference Include="Common.Logging, Version=3.3.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.3.3.0\lib\net40\Common.Logging.dll</HintPath>
     </Reference>
-    <Reference Include="Common.Logging.Core, Version=3.0.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Logging.Core.3.0.0\lib\net40\Common.Logging.Core.dll</HintPath>
+    <Reference Include="Common.Logging.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Common.Logging.Core.3.3.0\lib\net40\Common.Logging.Core.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
@@ -70,6 +70,14 @@
   <ItemGroup>
     <Compile Include="AbstractData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservas\Compuestos\ClaseDependenciaData.cs" />
+    <Compile Include="Reservas\Compuestos\EstadoData.cs" />
+    <Compile Include="Reservas\Compuestos\IClaseDependenciaData.cs" />
+    <Compile Include="Reservas\Compuestos\IEstadoData.cs" />
+    <Compile Include="Reservas\Compuestos\ITipoDependenciaData.cs" />
+    <Compile Include="Reservas\Compuestos\TipoDependenciaData.cs" />
+    <Compile Include="Reservas\DependenciaData.cs" />
+    <Compile Include="Reservas\IDependenciaData.cs" />
     <Compile Include="Support\IBaseSupport.cs" />
     <Compile Include="Support\ISupportDelete.cs" />
     <Compile Include="Support\ISupportSave.cs" />
@@ -77,6 +85,7 @@
     <Compile Include="Support\ISupportUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="WebConnect.Sign.pfx" />
   </ItemGroup>
@@ -91,7 +100,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ObjectData.xml" />
+    <EmbeddedResource Include="ObjectData.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

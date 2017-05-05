@@ -6,8 +6,8 @@
   </object>
 
   <db:provider id="MyDbProvider"
-               provider="Oracle.ManagedDataAccess.Client"
-               connectionString="(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=${DataBase.Host})(PORT=${DataBase.Port}))(CONNECT_DATA=(SERVICE_NAME=${DataBase.Service})))" />
+               provider="OracleClient-2.0"
+               connectionString="Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=${DataBase.Host})(PORT=${DataBase.Port}))(CONNECT_DATA=(SERVICE_NAME=${DataBase.Service})));User Id=${DataBase.Username};Password=${DataBase.Password};" />
                <!--connectionString="Database = ; Data Source = ; User Id = ${DataBase.Username}; Password = ${DataBase.Password}; Port = ;" />-->
   
   <object id="MySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate4">
@@ -23,7 +23,7 @@
         <entry key="connection.provider" 
                value="NHibernate.Connection.DriverConnectionProvider" />
         <entry key="dialect" 
-               value="NHibernate.Dialect.Oracle12cDialect" />
+               value="NHibernate.Dialect.Oracle10gDialect" />
         <entry key="connection.driver_class" 
                value="NHibernate.Driver.OracleClientDriver" />
         <entry key="hbm2ddl.auto" 
@@ -46,4 +46,8 @@
     <property name="CacheQueries" value="true" />
   </object>
 
+  <object name="IClaseDependenciaData" type="WebConnect.Data.Reservas.Compuestos.ClaseDependenciaData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
+  
 </objects>

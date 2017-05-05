@@ -80,6 +80,24 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebConnect.Core\WebConnect.Core.csproj">
+      <Project>{85221244-0c5c-4487-9f71-649206028334}</Project>
+      <Name>WebConnect.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebConnect.Data.Model\WebConnect.Data.Model.csproj">
+      <Project>{10db8d21-1077-4405-82cc-4df870128f7d}</Project>
+      <Name>WebConnect.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebConnect.Data\WebConnect.Data.csproj">
+      <Project>{e7fa7063-ce74-4d7a-8307-62bc43943ef6}</Project>
+      <Name>WebConnect.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebConnect.Services.Security\WebConnect.Services.Security.csproj">
+      <Project>{3220c859-9b1b-417a-8412-4b7ef671389c}</Project>
+      <Name>WebConnect.Services.Security</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

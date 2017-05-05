@@ -1,7 +1,11 @@
-﻿namespace WebConnect.Test
+﻿using WebConnect.Core;
+
+namespace WebConnect.Test
 {
-    public abstract class AbstractTest
+    public abstract class AbstractTest<TObj>
     {
-        public int MyProperty { get; set; }
+        public TObj Invoke() => AppCtx.Resolve<TObj>();
+
+        public T Invoke<T>() => AppCtx.Resolve<T>();
     }
 }

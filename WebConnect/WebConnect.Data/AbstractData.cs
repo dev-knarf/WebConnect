@@ -8,14 +8,14 @@ using WebConnect.Data.Support;
 
 namespace WebConnect.Data
 {
-    public abstract class AbstractData<TObj, TId> : HibernateDaoSupport where TObj : AbstractModel, ISupportSave<TObj>, ISupportUpdate<TObj>, ISupportDelete<TObj, TId>, ISupportSearch<TObj, TId>
+    public abstract class AbstractData<TObj, TId> : HibernateDaoSupport, ISupportSave<TObj>, ISupportUpdate<TObj>, ISupportDelete<TObj, TId>, ISupportSearch<TObj, TId> where TObj : AbstractModel
     {
         protected string Query;
 
         [Transaction(ReadOnly = false)]
         public void Save(TObj obj)
         {
-            if(obj == null)
+            if(obj == null) //NHibernate.Driver.OracleClientDriver
                 throw new ArgumentNullException(nameof(obj));
             HibernateTemplate.Save(obj); 
         }
