@@ -77,7 +77,6 @@
     <Compile Include="Support\ISupportUpdate.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="WebConnect.Sign.pfx" />
   </ItemGroup>

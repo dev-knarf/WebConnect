@@ -7,7 +7,8 @@
 
   <db:provider id="MyDbProvider"
                provider="Oracle.ManagedDataAccess.Client"
-               connectionString="Database = ${DataBase.Service}; Data Source = ${DataBase.Host}; User Id = ${DataBase.Username}; Password = ${DataBase.Password}; Port = ${DataBase.Port};" />
+               connectionString="(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=${DataBase.Host})(PORT=${DataBase.Port}))(CONNECT_DATA=(SERVICE_NAME=${DataBase.Service})))" />
+               <!--connectionString="Database = ; Data Source = ; User Id = ${DataBase.Username}; Password = ${DataBase.Password}; Port = ;" />-->
   
   <object id="MySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate4">
     <property name="DbProvider" ref="MyDbProvider" />

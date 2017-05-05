@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Data", "WebConne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Data.Model", "WebConnect.Data.Model\WebConnect.Data.Model.csproj", "{10DB8D21-1077-4405-82CC-4DF870128F7D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Test", "WebConnect.Test\WebConnect.Test.csproj", "{C5406091-053B-4CC4-BE99-716F308E3EB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Services", "WebConnect.Services\WebConnect.Services.csproj", "{EADFFA7B-A658-4FE6-ABCD-CF18E2CFF845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Services.Security", "WebConnect.Services.Security\WebConnect.Services.Security.csproj", "{3220C859-9B1B-417A-8412-4B7EF671389C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +33,18 @@ Global
 		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10DB8D21-1077-4405-82CC-4DF870128F7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5406091-053B-4CC4-BE99-716F308E3EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5406091-053B-4CC4-BE99-716F308E3EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5406091-053B-4CC4-BE99-716F308E3EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5406091-053B-4CC4-BE99-716F308E3EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EADFFA7B-A658-4FE6-ABCD-CF18E2CFF845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EADFFA7B-A658-4FE6-ABCD-CF18E2CFF845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EADFFA7B-A658-4FE6-ABCD-CF18E2CFF845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EADFFA7B-A658-4FE6-ABCD-CF18E2CFF845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3220C859-9B1B-417A-8412-4B7EF671389C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3220C859-9B1B-417A-8412-4B7EF671389C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3220C859-9B1B-417A-8412-4B7EF671389C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3220C859-9B1B-417A-8412-4B7EF671389C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
