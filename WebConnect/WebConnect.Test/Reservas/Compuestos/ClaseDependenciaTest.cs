@@ -13,13 +13,7 @@ namespace WebConnect.Test.Reservas.Compuestos
         public void CreateClase()
         {
             var clase = new ClaseDependencia {Nombre = "VICERRECTORIA"};
-            var log = new Log
-            {
-                Token = "12345569ABSCD7412589A",
-                Url = "ClaseDependencia/Create",
-                Body = clase.ToString()
-            };
-            Invoke().Insert(clase, log);
+            Invoke().Insert(clase);
         }
 
         [Test]
