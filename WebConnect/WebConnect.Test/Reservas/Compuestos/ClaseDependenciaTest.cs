@@ -1,13 +1,12 @@
 ﻿using System;
-using System.Linq;
 using NUnit.Framework;
+using WebConnect.Components.Reservas.Compuestos;
 using WebConnect.Data.Model.Reservas.Compuestos;
-using WebConnect.Data.Reservas.Compuestos;
 
 namespace WebConnect.Test.Reservas.Compuestos
 {
     [TestFixture]
-    public class ClaseDependenciaTest : AbstractTest<IClaseDependenciaData>
+    public class ClaseDependenciaTest : AbstractTest<IClaseDependenciaComponent>
     {
         [Test]
         public void CreateClase()
@@ -16,7 +15,7 @@ namespace WebConnect.Test.Reservas.Compuestos
             {
                 Nombre = "VICERRECTORIA"
             };
-            Invoke().Save(clase);
+            Invoke().Insert(clase);
         }
 
         [Test]

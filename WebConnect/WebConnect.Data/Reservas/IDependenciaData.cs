@@ -1,6 +1,9 @@
-﻿namespace WebConnect.Data.Reservas
+﻿using WebConnect.Data.Model.Reservas;
+using WebConnect.Data.Support;
+
+namespace WebConnect.Data.Reservas
 {
-    public interface IDependenciaData
+    public interface IDependenciaData : ISupportSave<Dependencia>, ISupportUpdate<Dependencia>, ISupportSearch<Dependencia, int>
     {
         
     }

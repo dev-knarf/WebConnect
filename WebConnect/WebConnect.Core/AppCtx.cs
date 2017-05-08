@@ -12,10 +12,10 @@ namespace WebConnect.Core
         
         private AppCtx() => _application = ContextRegistry.GetContext();
 
-        public static object Resolve(string name) => Instance._application.GetObject(name);
+        public static object Resolve(string name) => Instance._application.GetObject(name); 
 
-        public static T Resolve<T>(string name) => (T)Resolve(name);
-        
-        public static T Resolve<T>() => (T)Resolve(typeof(T).Name);
+        public static T Resolve<T>(string name) => (T)Instance._application.GetObject(name);
+
+        public static T Resolve<T>() => (T)Instance._application.GetObject(typeof(T).Name);
     }
 }

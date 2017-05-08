@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!--namespace WebConnect.Components.Reservas.Compuestos-->
+  <object id="IClaseDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.ClaseDependenciaComponent, WebConnect.Components">
+  </object>
+  <object id="IEstadoComponent" type="WebConnect.Components.Reservas.Compuestos.EstadoComponent, WebConnect.Components">
+  </object>
+  <object id="ITipoDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.TipoDependenciaComponent, WebConnect.Components">
+  </object>
+
+  <!--namespace WebConnect.Components.Reservas-->
+  <object id="IDependenciaComponent" type="WebConnect.Components.Reservas.DependenciaComponent, WebConnect.Components">
+  </object>
+  
+</objects>

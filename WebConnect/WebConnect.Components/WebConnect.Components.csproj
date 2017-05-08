@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C5406091-053B-4CC4-BE99-716F308E3EB2}</ProjectGuid>
+    <ProjectGuid>{57DD9F33-02FA-4634-8CFA-7AC8A2D82FDC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WebConnect.Test</RootNamespace>
-    <AssemblyName>WebConnect.Test</AssemblyName>
+    <RootNamespace>WebConnect.Components</RootNamespace>
+    <AssemblyName>WebConnect.Components</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,42 +30,25 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Common.Logging, Version=3.3.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Logging.3.3.0\lib\net40\Common.Logging.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Core, Version=3.3.1.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Logging.Core.3.3.1\lib\net40\Common.Logging.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Common.Logging.Log4Net1213, Version=3.3.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e, processorArchitecture=MSIL">
-      <HintPath>..\packages\Common.Logging.Log4Net1213.3.3.0\lib\net40\Common.Logging.Log4Net1213.dll</HintPath>
-    </Reference>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
-    </Reference>
-    <Reference Include="nunit.framework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
-    </Reference>
     <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
       <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.24160719\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
-    </Reference>
-    <Reference Include="Spring.Core, Version=2.0.1.45000, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
-      <HintPath>..\packages\Spring.Core.2.0.1\lib\net45\Spring.Core.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractTest.cs" />
+    <Compile Include="AbstractComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reservas\Compuestos\ClaseDependenciaTest.cs" />
-    <Compile Include="Reservas\Compuestos\EstadoTest.cs" />
-    <Compile Include="Reservas\Compuestos\TipoDependenciaTest.cs" />
+    <Compile Include="Reservas\Compuestos\ClaseDependenciaComponent.cs" />
+    <Compile Include="Reservas\Compuestos\EstadoComponent.cs" />
+    <Compile Include="Reservas\Compuestos\IClaseDependenciaComponent.cs" />
+    <Compile Include="Reservas\Compuestos\IEstadoComponent.cs" />
+    <Compile Include="Reservas\Compuestos\ITipoDependenciaComponent.cs" />
+    <Compile Include="Reservas\Compuestos\TipoDependenciaComponent.cs" />
+    <Compile Include="Reservas\DependenciaComponent.cs" />
+    <Compile Include="Reservas\IDependenciaComponent.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WebConnect.Components\WebConnect.Components.csproj">
-      <Project>{57dd9f33-02fa-4634-8cfa-7ac8a2d82fdc}</Project>
-      <Name>WebConnect.Components</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WebConnect.Core\WebConnect.Core.csproj">
       <Project>{85221244-0c5c-4487-9f71-649206028334}</Project>
       <Name>WebConnect.Core</Name>
@@ -74,15 +57,17 @@
       <Project>{10db8d21-1077-4405-82cc-4df870128f7d}</Project>
       <Name>WebConnect.Data.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebConnect.Services\WebConnect.Services.csproj">
-      <Project>{eadffa7b-a658-4fe6-abcd-cf18e2cff845}</Project>
-      <Name>WebConnect.Services</Name>
+    <ProjectReference Include="..\WebConnect.Data\WebConnect.Data.csproj">
+      <Project>{e7fa7063-ce74-4d7a-8307-62bc43943ef6}</Project>
+      <Name>WebConnect.Data</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <EmbeddedResource Include="ObjectComponent.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

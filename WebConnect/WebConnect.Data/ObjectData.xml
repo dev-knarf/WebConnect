@@ -6,9 +6,10 @@
   </object>
 
   <db:provider id="MyDbProvider"
-               provider="OracleClient-2.0"
+               provider="OracleODP-Managed-12-4.0" 
                connectionString="Data Source=(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp)(HOST=${DataBase.Host})(PORT=${DataBase.Port}))(CONNECT_DATA=(SERVICE_NAME=${DataBase.Service})));User Id=${DataBase.Username};Password=${DataBase.Password};" />
                <!--connectionString="Database = ; Data Source = ; User Id = ${DataBase.Username}; Password = ${DataBase.Password}; Port = ;" />-->
+  <!--OracleODP-Managed-12-4.0-->
   
   <object id="MySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate4">
     <property name="DbProvider" ref="MyDbProvider" />
@@ -25,7 +26,8 @@
         <entry key="dialect" 
                value="NHibernate.Dialect.Oracle10gDialect" />
         <entry key="connection.driver_class" 
-               value="NHibernate.Driver.OracleClientDriver" />
+               value="NHibernate.Driver.OracleManagedDataClientDriver" />
+        <!-- NHibernate.Driver.OracleClientDriver -->
         <entry key="hbm2ddl.auto" 
                value="none" />
         <entry key="hbm2ddl.keywords" 
@@ -45,9 +47,23 @@
     <property name="TemplateFlushMode" value="Auto" />
     <property name="CacheQueries" value="true" />
   </object>
-
+  
+  <!--Namespace WebConnect.Data.Reservas.Compuestos-->
   <object name="IClaseDependenciaData" type="WebConnect.Data.Reservas.Compuestos.ClaseDependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
   
+  <object name="IEstadoData" type="WebConnect.Data.Reservas.Compuestos.EstadoData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
+
+  <object name="ITipoDependenciaData" type="WebConnect.Data.Reservas.Compuestos.TipoDependenciaData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
+
+  <!--Namespace WebConnect.Data.Reservas-->
+  <object name="IDependenciaData" type="WebConnect.Data.Reservas.DependenciaData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
+
 </objects>

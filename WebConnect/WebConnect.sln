@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Services", "WebC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Services.Security", "WebConnect.Services.Security\WebConnect.Services.Security.csproj", "{3220C859-9B1B-417A-8412-4B7EF671389C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebConnect.Components", "WebConnect.Components\WebConnect.Components.csproj", "{57DD9F33-02FA-4634-8CFA-7AC8A2D82FDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{3220C859-9B1B-417A-8412-4B7EF671389C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3220C859-9B1B-417A-8412-4B7EF671389C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3220C859-9B1B-417A-8412-4B7EF671389C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57DD9F33-02FA-4634-8CFA-7AC8A2D82FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57DD9F33-02FA-4634-8CFA-7AC8A2D82FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57DD9F33-02FA-4634-8CFA-7AC8A2D82FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57DD9F33-02FA-4634-8CFA-7AC8A2D82FDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

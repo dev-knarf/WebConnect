@@ -46,25 +46,15 @@
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Web.DynamicData" />
-    <Reference Include="System.Web.Entity" />
-    <Reference Include="System.Web.ApplicationServices" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
     <Reference Include="System" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Configuration" />
-    <Reference Include="System.Web.Services" />
-    <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -78,9 +68,27 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractService.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reservas\Compuestos\ClaseDependenciaService.cs" />
+    <Compile Include="Reservas\Compuestos\EstadoService.cs" />
+    <Compile Include="Reservas\Compuestos\IClaseDependenciaService.cs" />
+    <Compile Include="Reservas\Compuestos\IEstadoService.cs" />
+    <Compile Include="Reservas\Compuestos\ITipoDependenciaService.cs" />
+    <Compile Include="Reservas\Compuestos\TipoDependenciaService.cs" />
+    <Compile Include="Reservas\DependenciaService.cs" />
+    <Compile Include="Reservas\IDependenciaService.cs" />
+    <Compile Include="Utility\ParamsType.cs" />
+    <Compile Include="Utility\ServiceResponse.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WebConnect.Components\WebConnect.Components.csproj">
+      <Project>{57dd9f33-02fa-4634-8cfa-7ac8a2d82fdc}</Project>
+      <Name>WebConnect.Components</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebConnect.Core\WebConnect.Core.csproj">
       <Project>{85221244-0c5c-4487-9f71-649206028334}</Project>
       <Name>WebConnect.Core</Name>
@@ -89,15 +97,12 @@
       <Project>{10db8d21-1077-4405-82cc-4df870128f7d}</Project>
       <Name>WebConnect.Data.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\WebConnect.Data\WebConnect.Data.csproj">
-      <Project>{e7fa7063-ce74-4d7a-8307-62bc43943ef6}</Project>
-      <Name>WebConnect.Data</Name>
-    </ProjectReference>
     <ProjectReference Include="..\WebConnect.Services.Security\WebConnect.Services.Security.csproj">
       <Project>{3220c859-9b1b-417a-8412-4b7ef671389c}</Project>
       <Name>WebConnect.Services.Security</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
