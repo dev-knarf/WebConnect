@@ -9,18 +9,15 @@ namespace WebConnect.Components.Reservas.Compuestos
 {
     public class ClaseDependenciaComponent : AbstractComponent<IClaseDependenciaData>, IClaseDependenciaComponent
     {
-        public void Insert(ClaseDependencia obj, Log log)
+        public void Insert(ClaseDependencia obj)
         {
             if(obj == null) throw new ArgumentNullException(nameof(obj));
-            if (log == null) throw new ArgumentNullException(nameof(log));
             Invoke().Save(obj);
-            Invoke<ILogData>().Save(log);
         }
 
-        public void Update(ClaseDependencia obj, Log log)
+        public void Update(ClaseDependencia obj)
         {
             if (obj == null) throw new ArgumentNullException(nameof(obj));
-            if (log == null) throw new ArgumentNullException(nameof(log));
             Invoke().Update(obj);
         }
 
