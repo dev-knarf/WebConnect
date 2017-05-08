@@ -12,13 +12,13 @@
     <property name="Nombre" type="String">
       <column name="NOMBRE" not-null="true" length="200" />
     </property>
-    <many-to-one name="Clase" insert="false" update="false">
+    <many-to-one name="Clase">
       <column name="CLASE_ID" />
     </many-to-one>
-    <many-to-one name="Estado" insert="false" update="false">
+    <many-to-one name="Estado">
       <column name="ESTADO_ID" />
     </many-to-one>
-    <many-to-one name="Tipo" insert="false" update="false">
+    <many-to-one name="Tipo">
       <column name="TIPO_ID" />
     </many-to-one>
     <property name="CreationDate" type="DateTime" insert="false" update="false">
