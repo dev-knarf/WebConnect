@@ -5,7 +5,7 @@
   <class name="TipoDependencia" table="RESERVAS_TIPOS" lazy="false" >
     <id name="ObjectId" type="Int32" unsaved-value="0">
       <column name="RECORD_ID" />
-      <generator class="sequence">
+      <generator class="sequence-identity">
         <param name="sequence" >TIPOS_SEC</param>
       </generator>
     </id>

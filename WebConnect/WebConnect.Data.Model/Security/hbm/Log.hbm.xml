@@ -5,7 +5,7 @@
   <class name="Log" table="RESERVAS_LOGS" lazy="false" >
     <id name="ObjectId" type="Int32" unsaved-value="0">
       <column name="RECORD_ID" />
-      <generator class="sequence">
+      <generator class="sequence-identity">
         <param name="sequence" >LOGS_SEC</param>
       </generator>
     </id>

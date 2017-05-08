@@ -13,7 +13,7 @@ namespace WebConnect.Test.Reservas
         {
             var dep = new Dependencia
             {
-                Nombre = "Unidad de Soporte",
+                Nombre = "Biblioteca",
                 Estado = Invoke<IEstadoComponent>().GetById(1),
                 Clase = Invoke<IClaseDependenciaComponent>().GetById(4),
                 Tipo = Invoke<ITipoDependenciaComponent>().GetById(2)
