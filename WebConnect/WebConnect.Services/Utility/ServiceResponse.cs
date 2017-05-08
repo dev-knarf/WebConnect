@@ -7,7 +7,10 @@
 
         public ServiceResponse(){}
 
-        public ServiceResponse(string message) => Messsage = message;
+        public ServiceResponse(string message)
+        {
+            Messsage = message;
+        }
 
         public ServiceResponse(bool success, string message)
         {

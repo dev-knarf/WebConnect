@@ -61,6 +61,11 @@
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
 
+  <!--Namespace WebConnect.Data.Security-->
+  <object name="ILogData" type="WebConnect.Data.Security.LogData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
+  
   <!--Namespace WebConnect.Data.Reservas-->
   <object name="IDependenciaData" type="WebConnect.Data.Reservas.DependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>

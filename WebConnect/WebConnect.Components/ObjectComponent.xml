@@ -3,14 +3,22 @@
 
   <!--namespace WebConnect.Components.Reservas.Compuestos-->
   <object id="IClaseDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.ClaseDependenciaComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
   </object>
   <object id="IEstadoComponent" type="WebConnect.Components.Reservas.Compuestos.EstadoComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
   </object>
   <object id="ITipoDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.TipoDependenciaComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
   </object>
 
   <!--namespace WebConnect.Components.Reservas-->
   <object id="IDependenciaComponent" type="WebConnect.Components.Reservas.DependenciaComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
+  </object>
+
+  <!--namespace WebConnect.Components.Security-->
+  <object id="ILogComponent" type="WebConnect.Components.Security.LogComponent, WebConnect.Components">
   </object>
   
 </objects>

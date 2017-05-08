@@ -8,11 +8,11 @@ namespace WebConnect.Services
     [AspNetCompatibilityRequirements(RequirementsMode = AspNetCompatibilityRequirementsMode.Required)]
     public abstract class AbstractService
     {
-        public TObj Invoke<TObj>() where TObj: class => AppCtx.Resolve<TObj>();
     }
 
     public abstract class AbstractService<TClass> : AbstractService where TClass : class  
     {
+        public TObj Invoke<TObj>() where TObj : class => AppCtx.Resolve<TObj>();
         public TClass Invoke() => AppCtx.Resolve<TClass>();
     }
 }

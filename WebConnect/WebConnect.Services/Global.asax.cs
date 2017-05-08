@@ -4,6 +4,8 @@ using System.Web;
 using System.Web.Routing;
 using WebConnect.Components.Reservas;
 using WebConnect.Components.Reservas.Compuestos;
+using WebConnect.Services.Reservas;
+using WebConnect.Services.Reservas.Compuestos;
 using WebConnect.Services.Security;
 
 namespace WebConnect.Services
@@ -21,12 +23,12 @@ namespace WebConnect.Services
         protected void Application_Start(object sender, EventArgs e)
         {
             //namespace WebConnect.Services.Reservas.Compuestos
-            LoadRoute<ClaseDependenciaComponent, UnsecureServiceFactory>();
-            LoadRoute<EstadoComponent, UnsecureServiceFactory>();
-            LoadRoute<TipoDependenciaComponent, UnsecureServiceFactory>();
+            LoadRoute<ClaseDependenciaService, UnsecureServiceFactory>();
+            LoadRoute<EstadoService, UnsecureServiceFactory>();
+            LoadRoute<TipoDependenciaService, UnsecureServiceFactory>();
 
             //namespace WebConnect.Services.Reservas
-            LoadRoute<DependenciaComponent, UnsecureServiceFactory>();
+            LoadRoute<DependenciaService, UnsecureServiceFactory>();
         }
         
         protected void Application_BeginRequest(object sender, EventArgs e)

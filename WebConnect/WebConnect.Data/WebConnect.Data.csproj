@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -78,6 +79,8 @@
     <Compile Include="Reservas\Compuestos\TipoDependenciaData.cs" />
     <Compile Include="Reservas\DependenciaData.cs" />
     <Compile Include="Reservas\IDependenciaData.cs" />
+    <Compile Include="Security\ILogData.cs" />
+    <Compile Include="Security\LogData.cs" />
     <Compile Include="Support\IBaseSupport.cs" />
     <Compile Include="Support\ISupportDelete.cs" />
     <Compile Include="Support\ISupportSave.cs" />

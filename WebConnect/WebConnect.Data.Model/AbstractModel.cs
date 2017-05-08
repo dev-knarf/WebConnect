@@ -8,7 +8,7 @@ namespace WebConnect.Data.Model
     {
         public TId ObjectId { get; set; }
 
-        public DateTime CreationDate { get; set; } = DateTime.Now;
+        public DateTime CreationDate { get; set; }
 
         //private static bool IsTransient(AbstractModel<TId> obj) => 
         //    obj != null && Equals(obj.ObjectId, default(TId));

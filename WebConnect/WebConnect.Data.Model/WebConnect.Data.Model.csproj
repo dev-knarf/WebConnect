@@ -20,6 +20,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,6 +47,7 @@
     <Compile Include="Reservas\Compuestos\Estado.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependencia.cs" />
     <Compile Include="Reservas\Dependencia.cs" />
+    <Compile Include="Security\Log.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reservas\hbm\Dependencia.hbm.xml" />
@@ -59,6 +61,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reservas\Compuestos\hbm\Estado.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Security\hbm\Log.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
