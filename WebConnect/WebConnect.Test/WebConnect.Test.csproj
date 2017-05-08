@@ -61,6 +61,7 @@
     <Compile Include="Reservas\Compuestos\ClaseDependenciaTest.cs" />
     <Compile Include="Reservas\Compuestos\EstadoTest.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependenciaTest.cs" />
+    <Compile Include="Reservas\DependenciaTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebConnect.Components\WebConnect.Components.csproj">
