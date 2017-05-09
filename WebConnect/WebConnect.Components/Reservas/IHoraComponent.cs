@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using WebConnect.Data.Model.Reservas.Compuestos;
+using WebConnect.Data.Model.Reservas;
 
-namespace WebConnect.Components.Reservas.Compuestos
+namespace WebConnect.Components.Reservas
 {
     public interface IHoraComponent
     {

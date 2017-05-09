@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using WebConnect.Data.Model.Reservas.Compuestos;
-using WebConnect.Data.Reservas.Compuestos;
+using WebConnect.Data.Model.Reservas;
+using WebConnect.Data.Reservas;
 
-namespace WebConnect.Components.Reservas.Compuestos
+namespace WebConnect.Components.Reservas
 {
     public class HoraComponent : AbstractComponent<IHoraData>, IHoraComponent
     {

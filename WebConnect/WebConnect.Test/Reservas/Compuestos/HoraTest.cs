@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using NUnit.Framework;
-using WebConnect.Components.Reservas.Compuestos;
-using WebConnect.Data.Model.Reservas.Compuestos;
+using WebConnect.Components.Reservas;
+using WebConnect.Data.Model.Reservas;
 
 namespace WebConnect.Test.Reservas.Compuestos
 {
@@ -24,7 +24,7 @@ namespace WebConnect.Test.Reservas.Compuestos
                 time = hora.ToString(formato, CultureInfo.InvariantCulture);
                 Console.WriteLine(time);
                 lista.Add(time);
-                Invoke().Insert(new Hora{Tiempo = time});
+                //Invoke().Insert(new Hora{Tiempo = time});
                 hora = hora.AddMinutes(30);
             } 
         }

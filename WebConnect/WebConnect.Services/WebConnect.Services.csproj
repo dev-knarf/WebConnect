@@ -88,10 +88,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependenciaService.cs" />
     <Compile Include="Reservas\Compuestos\EstadoService.cs" />
-    <Compile Include="Reservas\Compuestos\HoraService.cs" />
+    <Compile Include="Reservas\HoraService.cs" />
     <Compile Include="Reservas\Compuestos\IClaseDependenciaService.cs" />
     <Compile Include="Reservas\Compuestos\IEstadoService.cs" />
-    <Compile Include="Reservas\Compuestos\IHoraService.cs" />
+    <Compile Include="Reservas\IHoraService.cs" />
     <Compile Include="Reservas\Compuestos\ITipoDependenciaService.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependenciaService.cs" />
     <Compile Include="Reservas\DependenciaService.cs" />

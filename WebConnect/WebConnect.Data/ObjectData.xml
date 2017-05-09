@@ -56,12 +56,11 @@
   <object name="IEstadoData" type="WebConnect.Data.Reservas.Compuestos.EstadoData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
-
-  <object name="IHoraData" type="WebConnect.Data.Reservas.Compuestos.HoraData, WebConnect.Data" singleton="true" >
+  
+  <object name="ITipoDependenciaData" type="WebConnect.Data.Reservas.Compuestos.TipoDependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
-
-  <object name="ITipoDependenciaData" type="WebConnect.Data.Reservas.Compuestos.TipoDependenciaData, WebConnect.Data" singleton="true" >
+  <object name="ITipoSalaData" type="WebConnect.Data.Reservas.Compuestos.TipoSalaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
 
@@ -74,5 +73,8 @@
   <object name="IDependenciaData" type="WebConnect.Data.Reservas.DependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
-
+  
+  <object name="IHoraData" type="WebConnect.Data.Reservas.HoraData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
 </objects>

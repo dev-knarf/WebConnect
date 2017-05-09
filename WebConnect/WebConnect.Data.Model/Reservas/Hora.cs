@@ -1,4 +1,4 @@
-﻿namespace WebConnect.Data.Model.Reservas.Compuestos
+﻿namespace WebConnect.Data.Model.Reservas
 {
     public class Hora : AbstractModel
     {

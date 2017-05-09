@@ -8,15 +8,18 @@
   <object id="IEstadoComponent" type="WebConnect.Components.Reservas.Compuestos.EstadoComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
-  <object id="IHoraComponent" type="WebConnect.Components.Reservas.Compuestos.HoraComponent, WebConnect.Components">
+  <object id="ITipoDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.TipoDependenciaComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
-  <object id="ITipoDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.TipoDependenciaComponent, WebConnect.Components">
+  <object id="ITipoSalaComponent" type="WebConnect.Components.Reservas.Compuestos.TipoSalaComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
 
   <!--namespace WebConnect.Components.Reservas-->
   <object id="IDependenciaComponent" type="WebConnect.Components.Reservas.DependenciaComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
+  </object>
+  <object id="IHoraComponent" type="WebConnect.Components.Reservas.HoraComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
 
