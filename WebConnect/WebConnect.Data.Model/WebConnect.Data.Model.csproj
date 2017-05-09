@@ -45,6 +45,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependencia.cs" />
     <Compile Include="Reservas\Compuestos\Estado.cs" />
+    <Compile Include="Reservas\Compuestos\Hora.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependencia.cs" />
     <Compile Include="Reservas\Dependencia.cs" />
     <Compile Include="Security\Log.cs" />
@@ -64,6 +65,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Security\hbm\Log.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Reservas\Compuestos\hbm\Hora.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

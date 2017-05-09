@@ -57,6 +57,10 @@
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
 
+  <object name="IHoraData" type="WebConnect.Data.Reservas.Compuestos.HoraData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
+
   <object name="ITipoDependenciaData" type="WebConnect.Data.Reservas.Compuestos.TipoDependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>

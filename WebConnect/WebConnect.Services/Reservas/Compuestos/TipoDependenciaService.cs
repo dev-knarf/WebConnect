@@ -10,6 +10,5 @@ namespace WebConnect.Services.Reservas.Compuestos
         public TipoDependencia GetById(IntValue param) => Invoke().GetById(param.Value);
 
         public IList<TipoDependencia> GetAll() => Invoke().GetAll();
-
     }
 }

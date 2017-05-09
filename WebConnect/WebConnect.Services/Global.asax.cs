@@ -2,8 +2,6 @@
 using System.ServiceModel.Activation;
 using System.Web;
 using System.Web.Routing;
-using WebConnect.Components.Reservas;
-using WebConnect.Components.Reservas.Compuestos;
 using WebConnect.Services.Reservas;
 using WebConnect.Services.Reservas.Compuestos;
 using WebConnect.Services.Security;
@@ -25,6 +23,7 @@ namespace WebConnect.Services
             //namespace WebConnect.Services.Reservas.Compuestos
             LoadRoute<ClaseDependenciaService, UnsecureServiceFactory>();
             LoadRoute<EstadoService, UnsecureServiceFactory>();
+            LoadRoute<HoraService, UnsecureServiceFactory>();
             LoadRoute<TipoDependenciaService, UnsecureServiceFactory>();
 
             //namespace WebConnect.Services.Reservas
