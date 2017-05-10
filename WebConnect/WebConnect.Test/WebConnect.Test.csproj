@@ -59,6 +59,7 @@
     <Compile Include="AbstractTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependenciaTest.cs" />
+    <Compile Include="Reservas\Compuestos\EstadoReservaTest.cs" />
     <Compile Include="Reservas\Compuestos\EstadoTest.cs" />
     <Compile Include="Reservas\Compuestos\HoraTest.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependenciaTest.cs" />

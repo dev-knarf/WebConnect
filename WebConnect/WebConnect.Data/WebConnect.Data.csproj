@@ -72,6 +72,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependenciaData.cs" />
     <Compile Include="Reservas\Compuestos\EstadoData.cs" />
+    <Compile Include="Reservas\Compuestos\EstadoReservaData.cs" />
+    <Compile Include="Reservas\Compuestos\IEstadoReservaData.cs" />
     <Compile Include="Reservas\Compuestos\ITipoSalaData.cs" />
     <Compile Include="Reservas\Compuestos\TipoSalaData.cs" />
     <Compile Include="Reservas\EspacioData.cs" />

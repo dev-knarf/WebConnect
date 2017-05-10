@@ -12,8 +12,17 @@ namespace WebConnect.Test.Reservas.Compuestos
         [Test]
         public void CreateClase()
         {
-            var clase = new ClaseDependencia {Nombre = "VICERRECTORIA"};
-            Invoke().Insert(clase);
+            var clase1 = new ClaseDependencia { Nombre = "Rectoría" };
+            var clase2 = new ClaseDependencia { Nombre = "Vicerrectoría" };
+            var clase3 = new ClaseDependencia { Nombre = "Decanatura" };
+            var clase4 = new ClaseDependencia { Nombre = "Oficina" };
+            var clase5 = new ClaseDependencia { Nombre = "Unidad" };
+            Invoke().Insert(clase1);
+            Invoke().Insert(clase2);
+            Invoke().Insert(clase3);
+            Invoke().Insert(clase4);
+            Invoke().Insert(clase5);
+
         }
 
         [Test]

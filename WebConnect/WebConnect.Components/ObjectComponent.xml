@@ -8,6 +8,9 @@
   <object id="IEstadoComponent" type="WebConnect.Components.Reservas.Compuestos.EstadoComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
+  <object id="IEstadoReservaComponent" type="WebConnect.Components.Reservas.Compuestos.EstadoReservaComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
+  </object>
   <object id="ITipoDependenciaComponent" type="WebConnect.Components.Reservas.Compuestos.TipoDependenciaComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>

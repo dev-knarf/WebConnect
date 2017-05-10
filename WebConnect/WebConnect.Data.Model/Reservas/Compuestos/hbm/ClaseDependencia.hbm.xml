@@ -15,5 +15,8 @@
     <property name="Nombre" type="String">
       <column name="DESCRIPCION" not-null="true" length="200" />
     </property>
+    <property name="CreationDate" type="DateTime" insert="false" update="false">
+      <column name="FECHA_CREACION" not-null="true" />
+    </property>
   </class>
 </hibernate-mapping>

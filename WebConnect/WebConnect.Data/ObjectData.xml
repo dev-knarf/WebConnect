@@ -52,11 +52,12 @@
   <object name="IClaseDependenciaData" type="WebConnect.Data.Reservas.Compuestos.ClaseDependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
-  
   <object name="IEstadoData" type="WebConnect.Data.Reservas.Compuestos.EstadoData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
-  
+  <object name="IEstadoReservaData" type="WebConnect.Data.Reservas.Compuestos.EstadoReservaData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
   <object name="ITipoDependenciaData" type="WebConnect.Data.Reservas.Compuestos.TipoDependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>

@@ -11,11 +11,10 @@ namespace WebConnect.Test.Reservas.Compuestos
         [Test]
         public void CreateEstado()
         {
-            var estado = new Estado
-            {
-                Nombre = "ACTIVO"
-            };
-            Invoke().Insert(estado);
+            var estado1 = new Estado { Nombre = "Activo" };
+            var estado2 = new Estado { Nombre = "Inactivo" };
+            Invoke().Insert(estado1);
+            Invoke().Insert(estado2);
         }
 
         [Test]
