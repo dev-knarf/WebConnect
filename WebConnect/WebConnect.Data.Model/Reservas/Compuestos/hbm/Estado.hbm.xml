@@ -2,15 +2,18 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
                    assembly="WebConnect.Data.Model"
                    namespace="WebConnect.Data.Model.Reservas.Compuestos">
-  <class name="Estado" table="RESERVAS_ESTADOS" lazy="false" >
+  <class name="Estado" table="RESERVAS_CONFIGURACION" discriminator-value="Estado" where="DISCRIMINATOR = 'Estado'" lazy="false" >
     <id name="ObjectId" type="Int32" unsaved-value="0">
       <column name="RECORD_ID" />
       <generator class="sequence-identity">
-        <param name="sequence" >ESTADOS_SEC</param>
+        <param name="sequence">CONFIGURACION_SEC</param>
       </generator>
     </id>
+    <discriminator>
+      <column name="DISCRIMINATOR" not-null="true" />
+    </discriminator>
     <property name="Nombre" type="String">
-      <column name="NOMBRE" not-null="true" length="200" />
+      <column name="DESCRIPCION" not-null="true" length="200" />
     </property>
   </class>
 </hibernate-mapping>
