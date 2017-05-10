@@ -74,9 +74,11 @@
     <Compile Include="Reservas\Compuestos\EstadoData.cs" />
     <Compile Include="Reservas\Compuestos\ITipoSalaData.cs" />
     <Compile Include="Reservas\Compuestos\TipoSalaData.cs" />
+    <Compile Include="Reservas\EspacioData.cs" />
     <Compile Include="Reservas\HoraData.cs" />
     <Compile Include="Reservas\Compuestos\IClaseDependenciaData.cs" />
     <Compile Include="Reservas\Compuestos\IEstadoData.cs" />
+    <Compile Include="Reservas\IEspacioData.cs" />
     <Compile Include="Reservas\IHoraData.cs" />
     <Compile Include="Reservas\Compuestos\ITipoDependenciaData.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependenciaData.cs" />

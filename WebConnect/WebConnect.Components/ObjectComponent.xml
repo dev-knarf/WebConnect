@@ -19,6 +19,9 @@
   <object id="IDependenciaComponent" type="WebConnect.Components.Reservas.DependenciaComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
+  <object id="IEspacioComponent" type="WebConnect.Components.Reservas.EspacioComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
+  </object>
   <object id="IHoraComponent" type="WebConnect.Components.Reservas.HoraComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>

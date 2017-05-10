@@ -2,7 +2,7 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
                    assembly="WebConnect.Data.Model"
                    namespace="WebConnect.Data.Model.Reservas.Compuestos">
-  <class name="TipoSala" table="RESERVAS_CONFIGURACION" discriminator-value="TipoSala" lazy="false" >
+  <class name="TipoSala" table="RESERVAS_CONFIGURACION" discriminator-value="TipoSala" where="DISCRIMINATOR = 'TipoSala'" lazy="false" >
     <id name="ObjectId" type="Int32" unsaved-value="0">
       <column name="RECORD_ID" />
       <generator class="sequence-identity">

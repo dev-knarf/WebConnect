@@ -50,9 +50,11 @@
     <Compile Include="Reservas\Compuestos\EstadoComponent.cs" />
     <Compile Include="Reservas\Compuestos\ITipoSalaComponent.cs" />
     <Compile Include="Reservas\Compuestos\TipoSalaComponent.cs" />
+    <Compile Include="Reservas\EspacioComponent.cs" />
     <Compile Include="Reservas\HoraComponent.cs" />
     <Compile Include="Reservas\Compuestos\IClaseDependenciaComponent.cs" />
     <Compile Include="Reservas\Compuestos\IEstadoComponent.cs" />
+    <Compile Include="Reservas\IEspacioComponent.cs" />
     <Compile Include="Reservas\IHoraComponent.cs" />
     <Compile Include="Reservas\Compuestos\ITipoDependenciaComponent.cs" />
     <Compile Include="Reservas\Compuestos\TipoDependenciaComponent.cs" />

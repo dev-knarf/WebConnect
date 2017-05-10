@@ -73,7 +73,9 @@
   <object name="IDependenciaData" type="WebConnect.Data.Reservas.DependenciaData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
-  
+  <object name="IEspacioData" type="WebConnect.Data.Reservas.EspacioData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
   <object name="IHoraData" type="WebConnect.Data.Reservas.HoraData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>

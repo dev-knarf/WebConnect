@@ -64,6 +64,7 @@
     <Compile Include="Reservas\Compuestos\TipoDependenciaTest.cs" />
     <Compile Include="Reservas\Compuestos\TipoSalaTest.cs" />
     <Compile Include="Reservas\DependenciaTest.cs" />
+    <Compile Include="Reservas\EspacioTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\WebConnect.Components\WebConnect.Components.csproj">
