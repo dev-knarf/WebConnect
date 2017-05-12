@@ -15,7 +15,7 @@ namespace WebConnect.Data
         [Transaction(ReadOnly = false)]
         public void Save(TObj obj)
         {
-            if(obj == null) 
+            if(obj is null) 
                 throw new ArgumentNullException(nameof(obj));
             HibernateTemplate.Save(obj); 
         }
@@ -23,7 +23,7 @@ namespace WebConnect.Data
         [Transaction(ReadOnly = false)]
         public void Save(IList<TObj> listObj)
         {
-            if (listObj == null)
+            if (listObj is null)
                 throw new ArgumentNullException(nameof(listObj));
             listObj.ForEach(Save);
         }
@@ -31,7 +31,7 @@ namespace WebConnect.Data
         [Transaction(ReadOnly = false)]
         public void Update(TObj obj)
         {
-            if (obj == null)
+            if (obj is null)
                 throw new ArgumentNullException(nameof(obj));
             HibernateTemplate.Update(obj);
         }
@@ -39,7 +39,7 @@ namespace WebConnect.Data
         [Transaction(ReadOnly = false)]
         public void Update(IList<TObj> listObj)
         {
-            if (listObj == null)
+            if (listObj is null)
                 throw new ArgumentNullException(nameof(listObj));
             listObj.ForEach(Update);
         }
@@ -47,7 +47,7 @@ namespace WebConnect.Data
         [Transaction(ReadOnly = false)]
         public void Delete(TObj obj)
         {
-            if (obj == null)
+            if (obj is null)
                 throw new ArgumentNullException(nameof(obj));
             HibernateTemplate.Delete(obj);
         }
@@ -61,7 +61,7 @@ namespace WebConnect.Data
         [Transaction(ReadOnly = false)]
         public void Delete(IList<TObj> listObj)
         {
-            if (listObj == null)
+            if (listObj is null)
                 throw new ArgumentNullException(nameof(listObj));
             listObj.ForEach(Delete);
         }

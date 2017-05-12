@@ -28,6 +28,9 @@
   <object id="IHoraComponent" type="WebConnect.Components.Reservas.HoraComponent, WebConnect.Components">
     <property name="Logger" ref="ILogComponent" />
   </object>
+  <object id="IReservaComponent" type="WebConnect.Components.Reservas.ReservaComponent, WebConnect.Components">
+    <property name="Logger" ref="ILogComponent" />
+  </object>
 
   <!--namespace WebConnect.Components.Security-->
   <object id="ILogComponent" type="WebConnect.Components.Security.LogComponent, WebConnect.Components">

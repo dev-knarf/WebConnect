@@ -80,4 +80,7 @@
   <object name="IHoraData" type="WebConnect.Data.Reservas.HoraData, WebConnect.Data" singleton="true" >
     <property name="HibernateTemplate" ref="MyTemplate"/>
   </object>
+  <object name="IReservaData" type="WebConnect.Data.Reservas.ReservaData, WebConnect.Data" singleton="true" >
+    <property name="HibernateTemplate" ref="MyTemplate"/>
+  </object>
 </objects>

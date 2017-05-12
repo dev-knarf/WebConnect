@@ -2,28 +2,46 @@
 <hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
                    assembly="WebConnect.Data.Model"
                    namespace="WebConnect.Data.Model.Reservas">
-  <class name="Reserva" table="RESERVAS_ESPACIOS" lazy="false" >
+  <class name="Reserva" table="RESERVAS_RESERVAS" lazy="false" >
     <id name="ObjectId" type="Int32" unsaved-value="0">
       <column name="RECORD_ID" />
       <generator class="sequence-identity">
-        <param name="sequence" >ESPACIOS_SEC</param>
+        <param name="sequence">RESERVAS_SEC</param>
       </generator>
     </id>
-    <!--<property name="Nombre" type="String">
-      <column name="NOMBRE" not-null="true" length="150" />
-    </property>
-    <property name="Capacidad" type="Int32">
-      <column name="CAPACIDAD" not-null="true" />
-    </property>
-    <many-to-one name="Tipo">
-      <column name="TIPO_ID" />
+    <many-to-one name="Dependencia">
+      <column name="DEPENDENCIA_ID" not-null="true"  />
     </many-to-one>
+    <many-to-one name="HoraInicio">
+      <column name="HORA_INICIO_ID" not-null="true"  />
+    </many-to-one>
+    <many-to-one name="HoraFin">
+      <column name="HORA_FIN_ID" not-null="true"  />
+    </many-to-one>
+    <many-to-one name="Espacio">
+      <column name="ESPACIO_ID" not-null="true"  />
+    </many-to-one>
+    <property name="FechaSolicitud" type="DateTime">
+      <column name="FECHA_SOLICITUD" not-null="true" />
+    </property>
+    <property name="Solicita" type="String">
+      <column name="SOLICITA" length="200" />
+    </property>
+    <property name="Responsable" type="String">
+      <column name="RESPONSABLE" length="200" />
+    </property>
+    <property name="Actividad" type="String">
+      <column name="ACTIVIDAD" length="200" />
+    </property>
+    <property name="Email" type="String">
+      <column name="EMAIL" length="200" />
+    </property>
+    <property name="Observacion" type="String">
+      <column name="OBSERVACION"  />
+    </property>
     <many-to-one name="Estado">
-      <column name="ESTADO_ID" />
+      <column name="ESTADO_ID" not-null="true" />
     </many-to-one>
-    <property name="Descripcion" type="String">
-      <column name="DESCRIPCION"  />
-    </property>-->
     <property name="CreationDate" type="DateTime" insert="false" update="false">
       <column name="FECHA_CREACION" not-null="true" />
     </property>

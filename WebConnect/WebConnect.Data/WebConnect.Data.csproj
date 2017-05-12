@@ -86,6 +86,8 @@
     <Compile Include="Reservas\Compuestos\TipoDependenciaData.cs" />
     <Compile Include="Reservas\DependenciaData.cs" />
     <Compile Include="Reservas\IDependenciaData.cs" />
+    <Compile Include="Reservas\IReservaData.cs" />
+    <Compile Include="Reservas\ReservaData.cs" />
     <Compile Include="Security\ILogData.cs" />
     <Compile Include="Security\LogData.cs" />
     <Compile Include="Support\IBaseSupport.cs" />

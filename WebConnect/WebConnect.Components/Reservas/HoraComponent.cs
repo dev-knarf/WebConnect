@@ -9,7 +9,7 @@ namespace WebConnect.Components.Reservas
     {
         public void Insert(Hora obj)
         {
-            if(obj == null) throw new ArgumentNullException(nameof(obj));
+            if(obj is null) throw new ArgumentNullException(nameof(obj));
             Invoke().Save(obj);
         }
 

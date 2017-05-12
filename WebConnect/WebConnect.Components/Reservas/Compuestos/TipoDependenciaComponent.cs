@@ -9,13 +9,13 @@ namespace WebConnect.Components.Reservas.Compuestos
     {
         public void Insert(TipoDependencia obj)
         {
-            if(obj == null) throw  new ArgumentNullException(nameof(obj));
+            if(obj is null) throw  new ArgumentNullException(nameof(obj));
             Invoke().Save(obj);
         }
 
         public void Update(TipoDependencia obj)
         {
-            if (obj == null) throw new ArgumentNullException(nameof(obj));
+            if (obj is null) throw new ArgumentNullException(nameof(obj));
             Invoke().Update(obj);
         } 
 

@@ -6,7 +6,7 @@
     <id name="ObjectId" type="Int32" unsaved-value="0">
       <column name="RECORD_ID" />
       <generator class="sequence-identity">
-        <param name="sequence" >DEPENDENCIAS_SEC</param>
+        <param name="sequence">DEPENDENCIAS_SEC</param>
       </generator>
     </id>
     <property name="Nombre" type="String">

@@ -62,6 +62,8 @@
     <Compile Include="Reservas\Compuestos\TipoDependenciaComponent.cs" />
     <Compile Include="Reservas\DependenciaComponent.cs" />
     <Compile Include="Reservas\IDependenciaComponent.cs" />
+    <Compile Include="Reservas\IReservaComponent.cs" />
+    <Compile Include="Reservas\ReservaComponent.cs" />
     <Compile Include="Security\ILogComponent.cs" />
     <Compile Include="Security\LogComponent.cs" />
   </ItemGroup>
