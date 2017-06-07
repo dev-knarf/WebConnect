@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="WebConnect.Data.Model"
+                   namespace="WebConnect.Data.Model.Elecciones">
+  <class name="Empleado" table="EMPLEADO" lazy="false" where="SUBSTR(CENTRO_COSTO, 1, 1) = 'C'" >
+    <id name="ObjectId" type="Int32" unsaved-value="0">
+      <column name="EMPLEADO" />
+      <generator class="native" />
+    </id>
+    <property name="Nit" type="String">
+      <column name="NIT" not-null="true" length="20" />
+    </property>
+    <property name="Nombre" type="String">
+      <column name="NOMBRE" not-null="true" length="200" />
+    </property>
+    <property name="Apellido" type="String">
+      <column name="PRIMER_APELLIDO" not-null="true" length="200" />
+    </property>
+    <property name="Empresa" type="String">
+      <column name="EMPRESA" not-null="true" length="5" />
+    </property>
+    <property name="Estado" type="WebConnect.Data.Model.Elecciones.Types.EstadoType, WebConnect.Data.Model">
+      <column name="ESTADO" not-null="true" length="1" />
+    </property>
+    <property name="FkCentroCosto" type="String">
+      <column name="CENTRO_COSTO" not-null="true" length="10" unique="true" />
+    </property>
+    <join table="CENTRO_COSTO">
+      <key column="CENTRO_COSTO" property-ref="FkCentroCosto" />
+      <component name="CentroCosto" class="WebConnect.Data.Model.Elecciones.Compuestos.CentroCosto" >
+        <property name="Codigo" type="String">
+          <column name="CENTRO_COSTO" not-null="true" length="10" />
+        </property>
+        <property name="Nombre" type="String">
+          <column name="NOMBRE_CENTRO_COSTO" not-null="true" length="200" />
+        </property>
+        <property name="Estado" type="WebConnect.Data.Model.Elecciones.Types.EstadoType, WebConnect.Data.Model">
+          <column name="ESTADO" not-null="true" length="1" />
+        </property>
+        <many-to-one name="Tipo" column="TIPO_CENTRO_COSTO" insert="false" update="false" />
+      </component>
+    </join>
+    
+  </class>
+</hibernate-mapping>

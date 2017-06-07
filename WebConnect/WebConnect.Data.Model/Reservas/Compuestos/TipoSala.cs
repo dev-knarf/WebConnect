@@ -2,6 +2,6 @@
 {
     public class TipoSala : AbstractModel
     {
-        public string Descripcion { get; set; }
+        public string Nombre { get; set; }
     }
 }

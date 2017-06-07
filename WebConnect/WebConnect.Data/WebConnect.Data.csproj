@@ -69,6 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractData.cs" />
+    <Compile Include="Elecciones\EmpleadoData.cs" />
+    <Compile Include="Elecciones\IEmpleadoData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependenciaData.cs" />
     <Compile Include="Reservas\Compuestos\EstadoData.cs" />
@@ -108,7 +110,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ObjectData.xml" />
+    <EmbeddedResource Include="ObjectData.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

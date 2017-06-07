@@ -37,11 +37,18 @@
     <AssemblyOriginatorKeyFile>WebConnect.Sign.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NHibernate">
+      <HintPath>..\packages\NHibernate.4.1.1.4000\lib\net40\NHibernate.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractModel.cs" />
+    <Compile Include="Elecciones\Compuestos\CentroCosto.cs" />
+    <Compile Include="Elecciones\Compuestos\TipoCentro.cs" />
+    <Compile Include="Elecciones\Empleado.cs" />
+    <Compile Include="Elecciones\Types\EstadoType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependencia.cs" />
     <Compile Include="Reservas\Compuestos\EstadoReserva.cs" />
@@ -53,6 +60,7 @@
     <Compile Include="Reservas\Espacio.cs" />
     <Compile Include="Reservas\Reserva.cs" />
     <Compile Include="Security\Log.cs" />
+    <Compile Include="Utility\Filter.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reservas\hbm\Dependencia.hbm.xml" />
@@ -84,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reservas\Compuestos\hbm\EstadoReserva.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Elecciones\Compuestos\hbm\Empleado.hbm.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Elecciones\hbm\Empleado.hbm.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

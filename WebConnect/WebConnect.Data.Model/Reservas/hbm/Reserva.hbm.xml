@@ -21,7 +21,7 @@
     <many-to-one name="Espacio">
       <column name="ESPACIO_ID" not-null="true"  />
     </many-to-one>
-    <property name="FechaSolicitud" type="DateTime">
+    <property name="Fecha" type="DateTime">
       <column name="FECHA_SOLICITUD" not-null="true" />
     </property>
     <property name="Solicita" type="String">

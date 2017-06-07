@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using WebConnect.Data.Model.Reservas;
+using WebConnect.Data.Model.Utility;
 using WebConnect.Data.Reservas;
 
 namespace WebConnect.Components.Reservas
@@ -12,7 +13,7 @@ namespace WebConnect.Components.Reservas
         {
             if(obj is null) throw new ArgumentNullException(nameof(obj));
             var message = string.Empty;
-            var list = (List<Reserva>)Invoke().GetByFechaAndEspacio(obj.FechaSolicitud, obj.Espacio.ObjectId);
+            var list = (List<Reserva>)Invoke().GetByFechaAndEspacio(obj.Fecha, obj.Espacio.ObjectId);
 
             if (list != null)
             {
@@ -38,7 +39,7 @@ namespace WebConnect.Components.Reservas
             void ErrorException(IEnumerable<Reserva> filter)
             {
                 filter.ToList()
-                      .ForEach(r => message += $"\t - RECORD_ID:{r.ObjectId}, DATE:{r.FechaSolicitud.ToShortDateString()}, TIME:{r.HoraInicio.Tiempo} - {r.HoraFin.Tiempo}, ROOM:{r.Espacio.Nombre}\r");
+                      .ForEach(r => message += $"\t - RECORD_ID:{r.ObjectId}, DATE:{r.Fecha.ToShortDateString()}, TIME:{r.HoraInicio.Tiempo} - {r.HoraFin.Tiempo}, ROOM:{r.Espacio.Nombre}\r");
                 throw new Exception($"Se ha(n) presentado cruce con la(s) siguiente(s) reserva(s):\r{message}");
             }
         }
@@ -51,6 +52,14 @@ namespace WebConnect.Components.Reservas
 
         public Reserva GetById(int value) => Invoke().GetById(value);
 
+        public IList<Reserva> GetByFilter(Filter filter)
+        {
+            if (filter is null) throw new ArgumentNullException(nameof(filter));
+            return Invoke().GetByFilter(filter);
+        }
+
         public IList<Reserva> GetAll() => Invoke().GetAll();
+
+        
     }
 }

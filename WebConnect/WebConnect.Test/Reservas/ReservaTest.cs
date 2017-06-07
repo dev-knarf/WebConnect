@@ -1,8 +1,11 @@
 ﻿using System;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using NUnit.Framework;
 using WebConnect.Components.Reservas;
 using WebConnect.Components.Reservas.Compuestos;
 using WebConnect.Data.Model.Reservas;
+using WebConnect.Data.Model.Utility;
 
 namespace WebConnect.Test.Reservas
 {
@@ -14,7 +17,7 @@ namespace WebConnect.Test.Reservas
         {
             var reserva1 = new Reserva
             {
-                FechaSolicitud = new DateTime(2017,05, 11),
+                Fecha = new DateTime(2017,05, 11),
                 HoraInicio = Invoke<IHoraComponent>().GetById(3),
                 HoraFin = Invoke<IHoraComponent>().GetById(5),
                 Espacio = Invoke<IEspacioComponent>().GetById(1),
@@ -34,5 +37,28 @@ namespace WebConnect.Test.Reservas
             var obj = Invoke().GetById(1);
             Console.WriteLine(obj.ToString());
         }
+
+        [Test]
+        public void ReservaByFilter()
+        {
+            var obj = new Filter
+            {
+                ByDate = new Date
+                {
+                    Type = DateFilter.Between,
+                    StartDate = new DateTime(2017, 05, 11),
+                    EndDate = new DateTime(2017, 05, 12)
+                },
+                ByDependencia = 0,
+                ByEspacio = 0
+            };
+            Console.WriteLine(JsonConvert.SerializeObject(obj, Formatting.Indented, new JavaScriptDateTimeConverter()));
+            
+            var list = Invoke().GetByFilter(obj);
+            Console.WriteLine(list.Count);
+            Console.WriteLine("");
+            Console.WriteLine(JsonConvert.SerializeObject(list));
+        }
+
     }
 }

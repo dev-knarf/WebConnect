@@ -1,0 +1,66 @@
+
+<br />
+<div class="container">
+  <div class="row" >
+      <div class="col-2">
+        <label>Fechas: </label>
+      </div>
+      <div class="col-3">
+        <!--(change)="filtroFechaChange($event.target.value)"-->
+        <select [(ngModel)]="filtroFecha" class="form-control" (change)="selectDateChange()">
+          <option value="0" selected="selected" >Solo esta fecha</option>
+          <option value="1" >Antes de esta fecha</option>
+          <option value="2" >Después de esta fecha</option>
+          <option value="3" >Entre estas fecha</option>
+        </select>
+      </div>
+      <div class="col-3">
+        <input [ngModel]="fechaIni | date: 'yyyy-MM-dd'" (ngModelChange)="fechaIni = $event" class="form-control" type="date">
+      </div>
+      <div class="col-3" >
+        <input [ngModel]="fechaFin | date: 'yyyy-MM-dd'" (ngModelChange)="fechaFin = $event" class="form-control" type="date" *ngIf="optBetween">
+      </div>
+  </div>
+  <div class="row separator" > 
+
+  </div>  
+  <div class="row" >
+      <div class="col-2">
+        <label>Dependencia: </label>
+      </div>
+      <div class="col-9" >        
+        <select [(ngModel)]="selectedDep"  class="form-control" >          
+          <option *ngFor="let obj of depList" [ngValue]="obj"  >
+            {{obj.Nombre}}
+          </option>
+        </select>
+      </div>
+  </div>
+  <div class="row separator" > 
+
+  </div>
+ <div class="row" >     
+      <div class="col-2">
+        <label>Espacio: </label>
+      </div>
+      <div class="col-8" >        
+        <select [(ngModel)]="selectedEsp"  class="form-control" >          
+            <option *ngFor="let obj of espList" [ngValue]="obj" >{{obj.Nombre}}</option>
+        </select>
+      </div>      
+      <div class="col-1">        
+          <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#exampleModal" (click)="buscarReserva()" >Buscar</button>
+      </div>      
+  </div>
+  <div class="row" >     
+      <div class="col-12">
+        <label></label>
+      </div>      
+  </div>
+  <div class="row">
+    <h1>
+    {{titulo}}
+    </h1>
+  </div>
+  <listar-reservas [listarReservas]="objList"></listar-reservas>    
+</div>

@@ -67,10 +67,10 @@ namespace WebConnect.Data
         }
 
         [Transaction(ReadOnly = true)]
-        public TObj GetById(TId idObj) => Session.Get<TObj>(idObj);
+        public virtual TObj GetById(TId idObj) => Session.Get<TObj>(idObj);
         
         [Transaction(ReadOnly = true)]
-        public IList<TObj> GetAll() => Session.CreateCriteria<TObj>().List<TObj>();
+        public virtual IList<TObj> GetAll() => Session.CreateCriteria<TObj>().List<TObj>();
 
     }
 }

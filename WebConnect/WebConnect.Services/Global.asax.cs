@@ -10,24 +10,26 @@ namespace WebConnect.Services
 {
     public class Global : HttpApplication
     {
-        private static void LoadRoute<TService, TSecurity>() where TSecurity : ServiceHostFactoryBase
+        private static void LoadRoute<TService, TSecurity>(string app) where TSecurity : ServiceHostFactoryBase
         {
             var objType = typeof(TService);
-            RouteTable.Routes.Add(
-                new ServiceRoute(objType.Name, (TSecurity) Activator.CreateInstance(typeof(TSecurity)),
-                objType));
+            var appdir = string.IsNullOrEmpty(app) ? $"{objType.Name}" : $"{app}/{objType.Name}";
+            RouteTable.Routes.Add(new ServiceRoute(appdir, (TSecurity) Activator.CreateInstance(typeof(TSecurity)), objType));
         }
 
         protected void Application_Start(object sender, EventArgs e)
         {
             //namespace WebConnect.Services.Reservas.Compuestos
-            LoadRoute<ClaseDependenciaService, UnsecureServiceFactory>();
-            LoadRoute<EstadoService, UnsecureServiceFactory>();
-            LoadRoute<HoraService, UnsecureServiceFactory>();
-            LoadRoute<TipoDependenciaService, UnsecureServiceFactory>();
+            LoadRoute<ClaseDependenciaService, UnsecureServiceFactory>(App.Siades);
+            LoadRoute<EstadoService, UnsecureServiceFactory>(App.Siades);
+            LoadRoute<TipoDependenciaService, UnsecureServiceFactory>(App.Siades);
 
             //namespace WebConnect.Services.Reservas
-            LoadRoute<DependenciaService, UnsecureServiceFactory>();
+            LoadRoute<DependenciaService, UnsecureServiceFactory>(App.Siades);
+            LoadRoute<EspacioService, UnsecureServiceFactory>(App.Siades);
+            LoadRoute<HoraService, UnsecureServiceFactory>(App.Siades);
+            LoadRoute<ReservaService, UnsecureServiceFactory>(App.Siades);
+
         }
         
         protected void Application_BeginRequest(object sender, EventArgs e)

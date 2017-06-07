@@ -1,0 +1,50 @@
+<div class="row">
+  <table class="table table-striped table-bordered " >
+      <thead class="thead-inverse">
+        <tr>
+          <th class="text-center width-col-10">#</th>
+          <th class="text-center width-col-10">Fecha</th>
+          <th class="text-center width-col-10">Hora</th>
+          <th class="text-center width-col-20">Sala</th>
+          <th class="text-center width-col-20">Solicita</th>
+          <th class="text-center width-col-20">Actividad</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="listarReservas?.length != 0; then thenBlock else elseBlock">
+        
+      </tbody>      
+  </table> 
+</div>
+<div class="row">
+  <h6>Se encontraron {{listarReservas?.length}} reservas.</h6>
+</div>
+
+<ng-template #thenBlock>       
+    <tr *ngFor="let obj of listarReservas">
+          <td scope="row" class="text-center align-vm" >
+            {{obj.ObjectId | formatId: 5}}
+          </td>
+          <td class="text-center align-vm" >
+            {{toDate(obj.Fecha) | date: "dd-MM-yyyy" }}
+          </td>
+          <td class="text-center align-vm" >
+            {{obj.HoraInicio.Tiempo}}<br />{{obj.HoraFin.Tiempo}}
+          </td>
+          <td class="align-vm">{{obj.Espacio.Nombre}}</td>
+          <td class="align-vm">{{obj.Solicita}}</td>
+          <td class="align-vm">{{obj.Actividad}}</td>
+          <td class="text-center align-vm">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" (click)="viewDetails(obj)" >Detalles</button>            
+          </td>
+        </tr> 
+</ng-template>
+
+<ng-template #elseBlock>       
+    <tr>
+      <td class="align-vm"colspan="6">No hay datos!</td>      
+      <td class="text-center align-vm">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" disabled="disabled" >Detalles</button>
+      </td>
+    <tr>       
+</ng-template>
+<ver-reserva [objReserva]="selectedObj"></ver-reserva>

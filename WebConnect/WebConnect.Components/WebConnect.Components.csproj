@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractComponent.cs" />
+    <Compile Include="Elecciones\EmpleadoComponent.cs" />
+    <Compile Include="Elecciones\IEmpleadoComponent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reservas\Compuestos\ClaseDependenciaComponent.cs" />
     <Compile Include="Reservas\Compuestos\EstadoComponent.cs" />

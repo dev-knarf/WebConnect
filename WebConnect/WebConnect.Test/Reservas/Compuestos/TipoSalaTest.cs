@@ -12,7 +12,7 @@ namespace WebConnect.Test.Reservas.Compuestos
         [Test]
         public void CreateTipoSala()
         {
-            var ts = new TipoSala{ Descripcion = "LABORATORIO"};
+            var ts = new TipoSala{ Nombre = "LABORATORIO"};
             Invoke().Insert(ts);
         }
 
@@ -20,7 +20,7 @@ namespace WebConnect.Test.Reservas.Compuestos
         public void UpdateTipoSala()
         {
             var ts = Invoke().GetById(3);
-            ts.Descripcion = "SALA DE SISTEMA";
+            ts.Nombre = "SALA DE SISTEMA";
             Invoke().Update(ts);
         }
 
@@ -34,7 +34,7 @@ namespace WebConnect.Test.Reservas.Compuestos
         [Test]
         public void GetAllTipoSala()
         {
-            Invoke().GetAll().ToList().ForEach(ts => Console.WriteLine( ts.Descripcion));
+            Invoke().GetAll().ToList().ForEach(ts => Console.WriteLine( ts.Nombre));
         }
     }
 }
